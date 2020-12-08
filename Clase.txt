@@ -1,0 +1,55 @@
+datos
+  flujo de datos para lectura
+    fuente
+  y escritura
+    destino
+  bytes:
+    InputStream
+    OutputStream
+  caracteres:
+    Reader
+    Writer
+
+todas las clases se encuentran en Java.io
+
+File{
+  puede crear:
+    archivos
+    carpetas
+
+  Metodos:
+    File() -> constructor recive el nombre del archivo a crear
+    exists() -> existe o no un archivo/carpeta
+    createNewFile() -> crea archivos
+    mkdir() -> crea directorios
+    delete() -> borra
+    renameTo() ->
+    list() ->
+
+    /***no vistos***/
+    isAbsolute()
+    isDirectory()
+    isFile()
+    length()
+    getName()
+    getAbsolutePath()
+
+  Ejemplo:[
+    import java.io.File;
+    import java.io.IOException;
+
+    class Escribe{
+      main(){
+        try{
+          File archivo = new File("nombre_archivo.txt");
+          pl("Existe el archivo?" + archivo.exists());
+          bool creado = archivo.CreateNewFile();
+          pl("Se creo el archivo?" + creado);
+          pl("Existe el archivo?" + archivo.exists());
+        }catch(IOException e){
+          // nada
+        }
+      }
+    }
+  ]
+}
